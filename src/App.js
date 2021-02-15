@@ -1,18 +1,12 @@
-import "./App.css";
+import NavBar from "./Components/NavBar";
+import Contents from "./Components/Contents";
 
 // COMPONENT FUNCTION
 const App = () => {
-  const title = "personal blog";
-  const score = 20;
-  const link = "http://www.google.com";
-
   return (
     <div className="App">
-      <div className="content">
-        <h1>{title}</h1>
-        <p>{score === 50 ? "PASSED" : "FAILED"}</p>
-        <a href={link}>GOOGLE</a>
-      </div>
+      <NavBar />
+      <Contents />
     </div>
   );
 };

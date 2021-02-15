@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,13 +8,15 @@
 
 /* COLORS */
 :root {
-  --primary-color: #444;
+  --primary-color: #ccc;
+  --font-color: #1abc9c;
+  --font-hover: #148f77;
 }
 /* END COLORS */
 
 /* PRIMARY STYLING */
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -26,28 +30,45 @@ li {
 }
 
 a {
-  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.6rem;
   text-decoration: none;
+  color: var(--font-color);
+  margin: 0 0.8rem 0 0.8rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.container {
+a:hover {
+  color: var(--font-hover);
+  /* border-bottom: 0.2rem solid var(--font-hover); */
+}
+
+.mainContainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /* END PRIMARY STYLING */
 
 body {
   font-size: 62.5%;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.App {
-  text-align: center;
-}
-
-.content h1 {
-  font-size: 3rem;
+  color: var(--font-color);
   text-transform: uppercase;
+  background: var(--primary-color);
+  font-family: "Acme", sans-serif;
+}
+
+.navbar {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.contents {
+  width: 80%;
+  padding: 2rem;
+  margin: 2rem auto;
+  background: #ddd;
+  text-align: center;
+  border: 0.2rem solid #b3b6b7;
 }
