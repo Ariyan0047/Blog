@@ -4,6 +4,50 @@
   margin: 0;
 }
 
+/* COLORS */
+:root {
+  --primary-color: #444;
+}
+/* END COLORS */
+
+/* PRIMARY STYLING */
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+/* END PRIMARY STYLING */
+
 body {
+  font-size: 62.5%;
   font-family: "Times New Roman", Times, serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
 }
