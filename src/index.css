@@ -34,7 +34,7 @@ a {
   font-size: 1.6rem;
   text-decoration: none;
   color: var(--font-color);
-  margin: 0 0.8rem 0 0.8rem;
+  margin: 0 1rem 0 1rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -60,15 +60,16 @@ body {
 }
 
 .navbar {
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.65);
+  padding: 0.6rem 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .contents {
-  width: 80%;
-  padding: 2rem;
+  max-width: 80%;
+  padding: 1.2rem;
   margin: 2rem auto;
   background: #ddd;
   text-align: center;
   border: 0.2rem solid #b3b6b7;
+  box-shadow: 3px 3px 8px #444;
 }
