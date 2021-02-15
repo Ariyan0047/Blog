@@ -1,17 +1,27 @@
 import { useState } from "react";
 
 const Contents = () => {
-  const [name, setName] = useState("Ariyan");
+  const info = [
+    { id: 1, name: "jimmy" },
+    { id: 2, name: "sendo" },
+    { id: 3, name: "joe" },
+    { id: 4, name: "kavin" },
+  ];
 
-  const btnClick = () => {
-    setName("Zishan");
-  };
+  // REACT HOOK
+  const [blogs, setBlogs] = useState(info);
 
   return (
     <div className="contents">
       <h1>Blogs</h1>
-      <p>{name}</p>
-      <button onClick={btnClick}>click</button>
+      <div className="lists">
+        {blogs.map((blog) => (
+          <div className="blog_preview" key={blog.id}>
+            <div className="blog_id">author id : {blog.id}</div>
+            <div className="blog_name">author name : {blog.name}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -71,5 +71,14 @@ body {
   background: #ddd;
   text-align: center;
   border: 0.2rem solid #b3b6b7;
-  box-shadow: 3px 3px 8px #444;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.blog_preview {
+  padding: 0.4rem;
+  margin: 0.4rem 0;
+  font-size: 1.4rem;
+  background: #ccc;
+  font-weight: 700;
+  box-shadow: 1px 1px 4px #444;
 }
