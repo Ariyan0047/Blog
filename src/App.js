@@ -1,7 +1,17 @@
 import "./App.css";
 
-function App() {
-  return <div className="App"></div>;
-}
+// COMPONENT FUNCTION
+const App = () => {
+  const title = "personal blog";
 
+  return (
+    <div className="App">
+      <div className="content">
+        <h1>{title}</h1>
+      </div>
+    </div>
+  );
+};
+
+// EXPORTING COMPONENT FUNCTION
 export default App;

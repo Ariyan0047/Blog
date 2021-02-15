@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
 }
