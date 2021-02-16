@@ -49,6 +49,23 @@ a:hover {
   align-items: center;
   justify-content: space-around;
 }
+
+button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  background: #fff;
+  color: var(--font-color);
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  color: var(--font-hover);
+  background: #ddd;
+}
 /* END PRIMARY STYLING */
 
 body {
