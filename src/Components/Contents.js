@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 
 const Contents = () => {
-  const info = [
-    { id: 1, name: "jimmy" },
-    { id: 2, name: "sendo" },
-    { id: 3, name: "joe" },
-    { id: 4, name: "kavin" },
-    { id: 5, name: "sendo" },
-  ];
-
   // REACT HOOK
-  const [blogs, setBlogs] = useState(info);
+  const [blogs, setBlogs] = useState(null);
+  const [isPending, setPending] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      fetch("http://localhost:8080/blogs")
+        .then((resource) => resource.json())
+        .then((data) => setBlogs(data), setPending(false));
+    }, 4000);
+  }, []);
 
   const handleDelete = (id) => {
     const newBlogs = blogs.filter((blog) => blog.id !== id);
@@ -21,8 +22,10 @@ const Contents = () => {
   return (
     <div className="contents">
       <h1>Blogs</h1>
-      <BlogList blogs={blogs} title="all blogs" handleDelete={handleDelete} />
-      {/*<BlogList blogs={blogs.filter((blog) => blog.name === "sendo")} title="sendo's blogs"/>*/}
+      {isPending && <h1>loading...........</h1>}
+      {blogs && (
+        <BlogList blogs={blogs} title="all blogs" handleDelete={handleDelete} />
+      )}
     </div>
   );
 };

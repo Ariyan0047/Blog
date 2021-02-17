@@ -1,0 +1,10 @@
+{
+  "blogs": [
+    { "name": "jimmy", "profession": "full stack developer", "id": 1 },
+    { "name": "jack", "profession": "android developer", "id": 2 },
+    { "name": "joe", "profession": "php developer", "id": 3 },
+    { "name": "jessie", "profession": "react developer", "id": 4 },
+    { "name": "jhill", "profession": "vue developer", "id": 5 },
+    { "name": "jessica", "profession": "laravel developer", "id": 6 }
+  ]
+}
