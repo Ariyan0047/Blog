@@ -1,3 +1,4 @@
+import Error from "./Components/Error";
 import NavBar from "./Components/NavBar";
 import Create from "./Components/Create";
 import Contents from "./Components/Contents";
@@ -19,6 +20,9 @@ const App = () => {
           </Route>
           <Route exact path="/blogs/:id">
             <BlogDetails />
+          </Route>
+          <Route path="*">
+            <Error />
           </Route>
         </Switch>
       </div>

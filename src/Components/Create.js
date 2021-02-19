@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [blog, setBlog] = useState("");
   const [name, setName] = useState("");
   const [isPending, setPending] = useState(false);
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +16,10 @@ const Create = () => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(createBlog),
-    }).then(() => setPending(false));
+    }).then(() => {
+      history.push("/");
+      setPending(false);
+    });
 
     setTitle("");
     setBlog("");

@@ -59,15 +59,16 @@ button {
   cursor: pointer;
   padding: 0.8rem;
   font-size: 1.2rem;
-  background: #fff;
+  font-weight: 700;
+  background: #ddd;
   color: var(--font-color);
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
 
 button:hover {
+  background: #fff;
   color: var(--font-hover);
-  background: #ddd;
 }
 /* END PRIMARY STYLING */
 
@@ -101,7 +102,7 @@ body {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.4rem;
-  background: #ccc;
+  background: #ddd;
   box-shadow: 1px 1px 4px #444;
 }
 
