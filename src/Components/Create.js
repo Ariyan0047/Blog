@@ -4,11 +4,22 @@ const Create = () => {
   const [title, setTitle] = useState("");
   const [blog, setBlog] = useState("");
   const [name, setName] = useState("");
+  const [isPending, setPending] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const createBlog = { title, blog, name };
-    console.log(createBlog);
+
+    fetch("http://localhost:8000/blogs", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(createBlog),
+    }).then(() => setPending(false));
+
+    setTitle("");
+    setBlog("");
+    setName("");
+    setPending(true);
   };
 
   return (
@@ -34,7 +45,7 @@ const Create = () => {
             id="blog"
             required
             value={blog}
-            placeholder="ENTER AUTHOR NAME"
+            placeholder="ENTER BLOG"
             onChange={(event) => setBlog(event.target.value)}
           ></textarea>
         </div>
@@ -46,11 +57,12 @@ const Create = () => {
             id="name"
             required
             value={name}
-            placeholder="ENTER BLOG"
+            placeholder="ENTER AUTHOR NAME"
             onChange={(event) => setName(event.target.value)}
           />
         </div>
-        <input type="submit" value="SUBMIT" />
+        {!isPending && <input type="submit" value="SUBMIT" />}
+        {isPending && <input type="submit" value="SUBMITING....." disabled />}
       </form>
     </div>
   );
